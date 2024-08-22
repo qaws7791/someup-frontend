@@ -1,0 +1,11 @@
+# 커밋 메시지 규칙:
+#
+# <타입>(<범위>): <제목>
+#
+# <타입> 옵션: feat, fix, docs, style, refactor, test, chore, build, ci, perf, revert
+# <범위>: [선택 사항] 커밋의 범위 (예: component, module, feature)
+# <제목>: 변경 사항에 대한 간결한 설명 (첫 글자는 대문자, 마침표는 사용하지 않음)
+#
+# 예시:
+# feat(auth): 로그인 기능 추가
+# fix(api): 사용자 입력의 엣지 케이스 처리
