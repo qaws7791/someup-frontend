@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   extends: ["@commitlint/config-conventional"],
   rules: {
     "type-enum": [
@@ -25,3 +25,5 @@ module.exports = {
     "footer-leading-blank": [2, "always"],
   },
 };
+
+export default config;

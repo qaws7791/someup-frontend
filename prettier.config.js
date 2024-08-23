@@ -12,6 +12,7 @@ const config = {
   bracketSpacing: true, // 기본값. 객체 리터럴에서 { 뒤와 } 앞에 공백을 추가할지 결정
   bracketSameLine: false, // 기본값. 객체 리터럴의 { 를 같은 줄에 표시할지 결정
   arrowParens: "always", // 기본값. 화살표 함수의 인자가 하나일 때 괄호를 붙여줄지 결정. always - 항상 붙여줌, avoid - 하나일 때 붙이지 않음
+  plugins: ["prettier-plugin-tailwindcss"],
 };
 
 export default config;
