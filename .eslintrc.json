@@ -1,3 +1,23 @@
 {
-  "extends": ["eslint:recommended", "next","plugin:prettier/recommended"]
+  "extends": [
+    "eslint:recommended",
+    "next",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "no-relative-import-paths",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    // // 같은 폴더인 경우를 제외하고 import 경로는 항상 절대 경로를 사용해야 한다.
+    "no-relative-import-paths/no-relative-import-paths": [
+      "warn",
+      {
+        "allowSameFolder": true
+      }
+    ],
+    // import React from 'react'를 사용하지 않아도 된다.
+   "react/react-in-jsx-scope": "off"
+  }
 }
