@@ -1,0 +1,18 @@
+import { z } from 'zod';
+
+const clientEnvSchema: z.ZodObject<{
+  NEXT_PUBLIC_KAKAO_CLIENT_ID: z.ZodString;
+  NEXT_PUBLIC_KAKAO_REDIRECT_URI: z.ZodString;
+}> = z.object({
+  NEXT_PUBLIC_KAKAO_CLIENT_ID: z.string(),
+  NEXT_PUBLIC_KAKAO_REDIRECT_URI: z.string(),
+});
+
+export type ClientEnv = z.infer<typeof clientEnvSchema>;
+
+const clientEnv: ClientEnv = clientEnvSchema.parse({
+  NEXT_PUBLIC_KAKAO_CLIENT_ID: process.env.NEXT_PUBLIC_KAKAO_CLIENT_ID,
+  NEXT_PUBLIC_KAKAO_REDIRECT_URI: process.env.NEXT_PUBLIC_KAKAO_REDIRECT_URI,
+});
+
+export default clientEnv;
