@@ -1,8 +1,0 @@
-# 커밋 메시지 템플릿 적용
-TEMPLATE_FILE=".git/commit-message-template.txt"
-
-# 프로젝트 루트에 있는 템플릿 파일을 Git 내부로 복사
-cp ./commit-message-template.txt $TEMPLATE_FILE
-
-# Git에 템플릿 파일 설정
-git config commit.template $TEMPLATE_FILE
