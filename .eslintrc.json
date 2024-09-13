@@ -23,14 +23,14 @@
       "version": "18.3.1"
     }
   },
-  "plugins": [
-    "no-relative-import-paths",
-    "react-refresh"
-  ],
+  "plugins": ["no-relative-import-paths", "react-refresh"],
   "rules": {
     // React Fast Refresh 기능이 제대로 동작할 수 있도록 React 컴포넌트만 모듈의 기본(default), 명명된(named) export로 내보내도록 강제
     // 상수 export 는 허용
-    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+    "react-refresh/only-export-components": [
+      "warn",
+      { "allowConstantExport": true }
+    ],
     // // 같은 폴더인 경우를 제외하고 import 경로는 항상 절대 경로를 사용
     "no-relative-import-paths/no-relative-import-paths": [
       "warn",
@@ -39,6 +39,12 @@
       }
     ],
     // import React from 'react'를 사용하지 않아도 되도록 허용
-   "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   }
 }
